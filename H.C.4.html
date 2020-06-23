@@ -7,7 +7,7 @@
  <meta name="description" content="Александр Македонский, Александр Великий, Филипп II, Сражения Александра Македонского,диадохи, македонская фаланга, педзетайры, гетайры, гипасписты"/>
  <meta name="keywords" content="Александр Македонский, Александр Великий, Филипп II, Сражения Александра Македонского,диадохи, македонская фаланга, педзетайры, гетайры, гипасписты"/>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="../CSS/C.2.css">
+ <link rel="stylesheet" href="../CSS/C.4.css">
 </head>
  <body>
      <nav class="menu">
@@ -25,18 +25,19 @@
      </li>
     </ul>
    </nav>
-   <img src="IMG/Фаланга.jpg" alt="Фаланга" title="Фаланга" width="800" height="500"/> 
-   <img src="IMG/Македонский.ico" alt="Македонский" title="Александр Македонский" width="750" height="500"/> 
-   <img src="IMG/Македонский2.jpg" alt="Гетайры" title="Бюст Александра Македонского" width="450" height="600"/> 
-   <img src="IMG/Гетайры2.jpg" alt="Гетайры" title="Гетайры" width="750" height="500"/> 
-   <img src="IMG/Гавгамелы.jpg" alt="Гавгамелы" title="Гавгамелы" width="1000" height="500"/> 
-   <img src="IMG/Гидасп.png" alt="Гидасп" title="Гидасп" width="700" height="500"/> 
-   <img src="IMG/Гипаспист2.jpg" alt="Гипаспист" title="Гипаспист" width="390" height="630"/> 
-   <img src="IMG/Гипаспист3.jpg" alt="Гипаспист" title="Гипаспист" width="390" height="630"/>
-   <img src="IMG/Граник.jpg" alt="Битва на реке Граник" title="Битва на реке Граник" width="750" height="500"/> 
-   <img src="IMG/Кратер.jpg" alt="Кратер" title="Кратер" width="700" height="500"/> 
-   <img src="IMG/Педзетайры2.jpg" alt="Педзетайры" title="Педзетайры" width="700" height="500"/>
-   <img src="IMG/Педзетайры3.jpg" alt="Педзетайры" title="Педзетайры" width="700" height="500"/> 
-  <footer>© Copyright 2016. All Rights Reserved.</footer>
+   <h1>Регистрация</h1>
+
+   <div class="wrap">
+   <form action="https://google.ru" method="post" id="form" name="registration">
+    <input type="text" id="name" placeholder="Введите имя"/></br>
+    <input type="password" id="password" placeholder="Введите пароль"/></br>
+    <input type="text" id="email" placeholder="Введите email"/></br>
+    <input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Отправить"/> 
+    </form>
+  </div>
+  <footer>
+    <script src="../JS/J.2.js"></script>
+    © Copyright 2016. All Rights Reserved.
+  </footer>
  </body>
 </html>
