@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title> Войска Александра Македонского </title>
+<link rel="icon" href="IMG/Македонский.ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="Описание видов войск Александра Македонского: македонская фаланга, гейтары, гипасписты"/>
+<meta name="keywords" content="Александр Македонский, Александр Великий, македонская фаланга, гейтары, гипасписты"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body align="center" bgcolor="black" text="yellow">
+
+<div id="cube" style="height: 90px; width: 90px; background-color: purple;"></div>
+
+<script type="text/javascript">
+
+<!--Event handler - обработчик событий-->
+$(document).ready(function()
+{$("#cube").bind("click",growDiv);});
+
+function growDiv()
+{var width = Number(event.target.style.width.substring(0,event.target.style.width.length-2));
+event.target.style.width=(width+15)+"px";
+$("<p>Координаты мышки при нажатии: X = " +event.screenX+", Y = "+event.screenY+".</p>").insertAfter("div:last");}
+
+</script>
+
+</body>
+</html lang="ru">

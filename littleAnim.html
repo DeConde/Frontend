@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title> Войска Александра Македонского </title>
+<link rel="icon" href="IMG/Македонский.ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="Описание видов войск Александра Македонского: македонская фаланга, гейтары, гипасписты"/>
+<meta name="keywords" content="Александр Македонский, Александр Великий, македонская фаланга, гейтары, гипасписты"/>
+
+</head>
+
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+<!--Анимация-->
+$(document).ready(function()
+{$(".box").click(function(e)
+{var bigBox = $(".bigBox");
+var box = $(this);
+bigBox.css({"top":box.offset().top,
+            "left":box.offset().left,
+            "width":box.width(),
+            "height":box.height(), 
+            "background-color":box.css("background-color"),
+			"display":"block"
+            });
+
+bigBox.animate({"height":360},900);
+bigBox.animate({"width":360},900);
+bigBox.animate({"top":(window.innerHeight-360)/2},900);
+bigBox.animate({"left":(window.innerWidth-360)/2},900);			
+});
+});
+</script>
+
+<div class="box" style="width: 150px; height: 150px; background-color: fuchsia; display: inline-block"></div>
+<div class="box" style="width: 150px; height: 150px; background-color: aqua; display: inline-block"></div>
+<div class="box" style="width: 150px; height: 150px; background-color: indigo; display: inline-block"></div>
+<div class="bigBox" style="width: 360px; height: 360px; position: absolute; display: none"></div>
+
+</body>
+</html lang="ru">

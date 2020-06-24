@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title> Войска Александра Македонского </title>
+<link rel="icon" href="IMG/Македонский.ico"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="description" content="Описание видов войск Александра Македонского: македонская фаланга, гейтары, гипасписты"/>
+<meta name="keywords" content="Александр Македонский, Александр Великий, македонская фаланга, гейтары, гипасписты"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+
+<!--Скрыть/показать-->
+$(document).ready(function()
+{$("#hide").bind("click", hideMilitary);
+$("#show").bind("click", showMilitary);
+});
+
+function hideMilitary()
+{$(".military").hide(2100, function()// процесс постепенного скрытия войск
+{$("#hide").hide();// смена надписи (скрыть на показать)
+$("#show").show();// смена надписи (скрыть на показать)
+});}
+
+function showMilitary()
+{$(".military").show(2100, function()
+{$("#hide").show();
+$("#show").hide();
+});}
+
+<!--Галлерея-->
+var animTime = 900;
+$(document).ready(function()
+{$(".box").click(function(e)
+{var bigBox = $(".bigBox");
+bigBox.css("top",(window.innerHeight-bigBox.height()) / 2);
+bigBox.css("left",(window.innerWidth-bigBox.width()) / 2);
+bigBox.css("background-color",$(e.target).css("background-color"));
+bigBox.show(animTime);
+});
+});
+
+$(document).ready(function()
+{$(".bigBox").click(function()
+{$(this).hide(animTime);
+});
+});
+
+</script>
+
+</head>
+
+<body>
+
+<div class="box" style="height: 90px; width: 90px; background-color: orange; display: inline-block;"></div>
+<div class="box" style="height: 90px; width: 90px; background-color: lime; display: inline-block;"></div>
+<div class="box" style="height: 90px; width: 90px; background-color: salmon; display: inline-block;"></div>
+<div class="bigBox" style="height: 180px; width: 180px; position: absolute; display: none;"></div>
+
+<br/>
+<br/>
+
+<span id="hide" onclick="alert('Магия начинается!')">Скрыть войска!</span>
+<span id="show" style="display: none" onclick="alert('Смотри, что сейчас будет!')">Показать войска!</span>
+
+<div class="military">
+<p>Педзетайры</p>
+<p>Гипасписты</p>
+<p>Гетайры</p>
+</div>
+
+</body>
+</html lang="ru">
