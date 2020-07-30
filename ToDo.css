@@ -1,0 +1,42 @@
+body {
+  background-color: purple 
+}
+
+.container {
+  margin: 0 auto;
+  padding-top: 50px; 
+}
+
+.important {
+  font-weight: bold;
+  color: gold; 
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: gold;
+  font-size: 30px; 
+}
+
+input[type=text] {
+  width: 376px;
+  padding: 10px; 
+}
+
+button {
+  margin-top: 10px;
+  width: 100px;
+  padding: 10px; 
+}
+
+.todo {
+  padding-left: 0; 
+}
+ 
+.todo li {
+    padding: 1em;
+    list-style-type: none; 
+}
+ 
+
