@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+<title>CSS Пример шаблона флексбокс</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: red;
+}
+
+.body__header {
+    background-image: url('');
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.body__column {
+    display: -webkit-flex;
+    display: -ms-flex: 1;
+    display: -o-flex: 1;
+    display: -moz-flex: 1;
+    display: flex;
+}
+
+.body__column__column {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    -o-flex: 1;
+    -moz-flex: 1;
+    flex: 1;
+    padding: 10px;
+    height: 300px; 
+    background-image: url('');
+}
+
+.body__footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    background-image: url('');
+}
+
+@media (max-width: 600px) {
+    .body__column {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -o-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+
+<p><strong>Примечание:</strong> Это прототип макета, сверстан с помощью CSS flexbox адаптивно и кросбраузерно.</p>
+
+<div class="body__header">Заголовок</div>
+
+<div class="body__column">
+  <div class="body__column__column">Столбец</div>
+  <div class="body__column__column">Столбец</div>
+  <div class="body__column__column">Столбец</div>
+</div>
+
+<div class="body__footer">
+  <p>Подвал</p>
+</div>
+
+</body>
+</html>
